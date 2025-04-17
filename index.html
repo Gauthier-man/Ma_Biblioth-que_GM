@@ -24,6 +24,12 @@
           <a href="#">
             <li>Explorer</li>
           </a>
+          <a href="#">
+            <li>Contact</li>
+          </a>
+          <a href="#">
+            <li>À propos</li>
+          </a>
         </ul>
         <div class="search-container">
           <input type="text" id="searchInput" placeholder="Rechercher" />
@@ -35,8 +41,21 @@
       <section id="book-list">
         <h1>Livres</h1>
         <div class="bar"></div>
-        <button>Date +</button>
-        <button>Date -</button>
+        <div class="sort-books">
+          <button id="btnDateHigh">Date +</button>
+          <button id="btnDateLow">Date -</button>
+          <div class="rangeContainer">
+            <input
+              type="range"
+              id="rangeValue"
+              min="0"
+              max="50"
+              step="1"
+              value="12"
+            />
+            <span id="booksRange">12</span>
+          </div>
+        </div>
         <div class="card-container"></div>
       </section>
     </main>
