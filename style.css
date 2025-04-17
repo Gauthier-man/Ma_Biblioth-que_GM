@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+main {
+    max-width: 85%;
+    margin: auto;
+    padding: 4rem 2rem;
+}
+input,
+button {
+    padding: 20px;
+    width: 300px;
+    border-radius: 1rem;
+    border: 2px solid #d5bdaf;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 10px 16px;
+    background: #dad7cd;
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        img {
+         width: 200px;
+         height: 100px;
+         object-fit: cover;
+        }
+        ul {
+            display: flex;
+            gap: 20px;
+           font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            a {
+                text-decoration: none;
+                list-style: none;
+                color: inherit;
+            }
+        }
+
+        .search-container {
+            position: relative;
+
+            .fa-magnifying-glass {
+                position: absolute;
+                top: 20px;
+                bottom: 0;
+                right: 18px;
+             
+            }
+        }
+    }
+    }
+  
+
+    #book-list {
+        
+     
+        .bar {
+            border: 1px solid #000;
+            margin: 1rem 0;
+
+        }
+
+     
+
+
+        button {
+            width: 200px;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 0.4rem;
+            color: white;
+            font-weight: 500;
+            background-color: #000;
+            &:hover {
+                background-color: #181414;
+            }
+        }
+
+        .card-container {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2rem 0;
+            gap: 20px;
+
+            .card {
+                width: 300px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }

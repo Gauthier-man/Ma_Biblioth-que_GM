@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ma Bibliothèque</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="images/logo_book-removebg-preview.png" alt="logo" />
+        <ul>
+          <a href="#">
+            <li>Mes livres</li>
+          </a>
+          <a href="#">
+            <li>Explorer</li>
+          </a>
+        </ul>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Rechercher" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="book-list">
+        <h1>Livres</h1>
+        <div class="bar"></div>
+        <button>Date +</button>
+        <button>Date -</button>
+        <div class="card-container"></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
