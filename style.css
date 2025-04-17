@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #d5bdaf;
+    background: #332f2f;
 }
 
 main {
@@ -37,7 +37,8 @@ header {
     position: sticky;
     top: 0;
     padding: 10px 16px;
-    background: #dad7cd;
+    background: #f5e6b1;
+    
     nav {
         display: flex;
         align-items: center;
@@ -112,7 +113,7 @@ header {
             .card {
                 width: 200px;
                  height: 450px; 
-                border: 5px solid #fec3a6;
+                border: 5px solid #f0c982;
                 text-align: center;
                 line-height: 1.5;
                 img {

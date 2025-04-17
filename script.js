@@ -5,19 +5,21 @@ const btnDateHigh = document.querySelector("#btnDateHigh");
 const btnDateLow = document.querySelector("#btnDateLow");
 // const iconSearch = document.querySelector(".fa-magnifying-glass")
 const rangeValue = document.querySelector("#rangeValue");
-const booksRange = document.querySelector("#booksRange")
+const booksRange = document.querySelector("#booksRange");
 
+
+var numberOfBooks = 12;
 let sorType = "";
 
 // TODO : Récupérer / fetch une liste de livres 
-const apiUrl = "https://openlibrary.org/search.json?q=the+lord+of+the+rings?20";
+const apiUrl = "https://openlibrary.org/search.json?q=the+lord+of+the+rings";
 var books = [];
 async function getBooks() {
     const request = await fetch(apiUrl);
     const data = await request.json();
     books = data.docs;
     console.log("Données reçues", data);
-    
+
     showBooks();
 }
 
@@ -32,8 +34,9 @@ function showBooks() {
     // const search2 = searchInput.value.toLowerCase();
     if(search !=""){
         
-        list = list.filter(b=> b.first_publish_year==search);
-        // list = list.filter(b=> b.title.toLowerCase().includes(search));
+        if(isNaN(search))
+            list = list.filter(b=> b.title.toLowerCase().includes(search));
+        else list = list.filter(b=> b.first_publish_year==search);
     }
 
     // Trier
@@ -41,7 +44,7 @@ function showBooks() {
     if(sorType =="DateLow") list.sort((a, b) => a.first_publish_year - b.first_publish_year);
 
     //Range
-
+   list = list.slice(0,numberOfBooks);
    
 list.forEach(b=> {
     const card = `
@@ -84,6 +87,18 @@ btnDateLow.addEventListener("click", ()=> {
     showBooks();
 })
  
+
+rangeValue.addEventListener("input", (e) => {
+    booksRange.innerHTML = e.target.value;
+    numberOfBooks = e.target.value;
+    showBooks();
+
+  });
+  
+//   rangeValue.addEventListener("input", (e) => {
+//     filter = e.target.value;
+//     showBooks();
+//   });
 
 }
 
